@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h2>Listado de personas</h2>
-    <app-persona></app-persona>
-    <app-persona></app-persona>
-</body>
-</html>
+<div class="container">
+    <div class="row">
+        <div class="col">            
+            <h2>Listado de personas</h2>
+
+            <button class="btn btn-primary" [disabled] = "deshabilitar"
+            (click)="agregarPersona()"
+            >Agregar Persona</button>
+            {{mensaje}}
+            <app-persona></app-persona>
+
+            <label>Título Persona</label>
+            <input type="text" class="form-control"
+            [(ngModel)] = 'titulo'>
+            <p style="color: orange;">{{titulo}}</p>
+        </div>
+    </div>
+</div>

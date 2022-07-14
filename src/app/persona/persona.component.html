@@ -1,1 +1,10 @@
-<p>persona !</p>
+<p>
+    Nombre: {{getNombre()}}
+    Apellido: {{getApellido()}}
+    Edad: {{getEdad()}}
+</p>
+
+<div (keyup)="0">
+    <input #entrada />
+    {{ entrada.value }}
+</div>
